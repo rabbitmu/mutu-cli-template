@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stankjs/elephant.git"
+    "url": "git@github.com:rabbitmu/mutu-cli-template.git"
   },
   "keywords": [
     "vuex",
@@ -19,9 +19,9 @@
   "author": "muming",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stankjs/elephant/issues"
+    "url": "https://github.com/rabbitmu/elephant/issues"
   },
-  "homepage": "https://github.com/stankjs/elephant#readme",
+  "homepage": "https://github.com/rabbitmu/elephant#readme",
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",

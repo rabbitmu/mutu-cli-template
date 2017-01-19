@@ -1,4 +1,4 @@
-基于vue生态的数据展示平台
+## mutu-cli's vue.js project structure
 
 1.项目简介
 
