@@ -18,10 +18,6 @@
   ],
   "author": "muming",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rabbitmu/elephant/issues"
-  },
-  "homepage": "https://github.com/rabbitmu/elephant#readme",
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
