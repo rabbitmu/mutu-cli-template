@@ -3,8 +3,8 @@ logs
 *.log
 npm-debug.log*
 
-# Dist
-dist
+# DEV_Dist
+dev_dist
 
 # Runtime data
 pids

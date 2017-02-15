@@ -12,7 +12,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const baseConfig = require('./webpack.base.config');
 
-const DIST_PATH = path.join(__dirname, './dist/');
+const COMPILE_PATH = path.join(__dirname, './dev_dist/');
 
 const config = merge(baseConfig, {
     entry: {
@@ -36,8 +36,9 @@ const config = merge(baseConfig, {
     debug: true,
     devtool: 'source-map',
     output: {
-        path: DIST_PATH,
-        filename: '[name].bundle.js'
+        path: COMPILE_PATH,
+        filename: '[name].bundle.js',
+        publicPath: '/static'
     },
     stats: {
         colors: true,

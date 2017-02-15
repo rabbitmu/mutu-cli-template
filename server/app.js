@@ -13,7 +13,7 @@ const port = 3001;
 const __DEV__ = process.env.NODE_ENV == 'development';
 
 // 静态目录
-const staticResourceDir = `../dist`;
+const staticResourceDir = `../dev_dist`;
 
 if (__DEV__) {
     // 启动webpack热加载
@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // 设置静态目录
-app.use('/', express.static(path.join(__dirname, staticResourceDir)));
+app.use('/static', express.static(path.join(__dirname, staticResourceDir)));
 // app.use('/map', express.static(path.join(__dirname, staticMapDir)));
 
 // 控制api路由根路径
