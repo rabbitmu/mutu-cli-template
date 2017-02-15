@@ -37,7 +37,8 @@ const config = merge(baseConfig, {
     devtool: 'source-map',
     output: {
         path: DIST_PATH,
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: '/'
     },
     stats: {
         colors: true,
