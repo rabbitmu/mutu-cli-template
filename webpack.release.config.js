@@ -32,8 +32,7 @@ const config = merge(baseConfig, {
     devtool: false,
     output: {
         path: DIST_PATH,
-        filename: '[name].bundle.js',
-        publicPath: '/static'
+        filename: '[name].bundle.js'
     }
 });
 
