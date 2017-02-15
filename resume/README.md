@@ -1,1 +1,0 @@
-## Mutu's personal resume
