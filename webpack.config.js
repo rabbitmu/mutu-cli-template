@@ -15,48 +15,48 @@ const baseConfig = require('./webpack.base.config');
 const COMPILE_PATH = path.join(__dirname, './dev_dist/');
 
 const config = merge(baseConfig, {
-    entry: {
-        app: [
-            'webpack-hot-middleware/client',
-            './assets/app.js'
-        ]
-    },
-    plugins: [
-        // new CleanWebpackPlugin([DIST_PATH]),
-        // new DashboardPlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"development"'
-            }
-        })
-    ],
-    debug: true,
-    devtool: 'source-map',
-    output: {
-        path: COMPILE_PATH,
-        filename: '[name].bundle.js',
-        publicPath: '/static'
-    },
-    stats: {
-        colors: true,
-        modules: true,
-        reasons: true,
-        assets: true,
-    },
-    progress: true,
-    keepalive: true,
-    watchOptions: {
-        aggregateTimeout: 500, // ms, default is 300
-        poll: true
-    },
-    devServer: {
-        historyApiFallback: {
-            index: '/app.html'
-        }
-    }
+	entry: {
+		app: [
+			'webpack-hot-middleware/client',
+			'./assets/app.js'
+		]
+	},
+	plugins: [
+		// new CleanWebpackPlugin([DIST_PATH]),
+		// new DashboardPlugin(),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoErrorsPlugin(),
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: '"development"'
+			}
+		})
+	],
+	debug: true,
+	devtool: 'source-map',
+	output: {
+		path: COMPILE_PATH,
+		filename: '[name].bundle.js',
+		publicPath: '/static'
+	},
+	stats: {
+		colors: true,
+		modules: true,
+		reasons: true,
+		assets: true,
+	},
+	progress: true,
+	keepalive: true,
+	watchOptions: {
+		aggregateTimeout: 500, // ms, default is 300
+		poll: true
+	},
+	devServer: {
+		historyApiFallback: {
+			index: '/app.html'
+		}
+	}
 });
 
 module.exports = config;

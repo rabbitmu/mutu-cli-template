@@ -7,10 +7,10 @@ import App from 'container/App';
 
 // 定义路由
 const routes = [
-    {
-        path: '/app',
-        component: App
-    }
+	{
+		path: '/app',
+		component: App
+	}
 ];
 
 export default routes;

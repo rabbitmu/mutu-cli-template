@@ -16,17 +16,17 @@ const __DEV__ = process.env.NODE_ENV == 'development';
 const staticResourceDir = `../dev_dist`;
 
 if (__DEV__) {
-    // 启动webpack热加载
-    const webpack = require('webpack');
-    const config = require('../webpack.config');
-    const compiler = webpack(config);
+	// 启动webpack热加载
+	const webpack = require('webpack');
+	const config = require('../webpack.config');
+	const compiler = webpack(config);
 
-    app.use(require('webpack-dev-middleware')(compiler, {
-        noInfo: true,
-        publicPath: config.output.publicPath
-    }));
+	app.use(require('webpack-dev-middleware')(compiler, {
+		noInfo: true,
+		publicPath: config.output.publicPath
+	}));
 
-    app.use(require('webpack-hot-middleware')(compiler));
+	app.use(require('webpack-hot-middleware')(compiler));
 }
 
 // parse application/x-www-form-urlencoded
@@ -56,8 +56,8 @@ app.use(history());
 
 // 打开监听
 app.listen(port, (err) => {
-    if (err) return console.log(err);
+	if (err) return console.log(err);
 
-    console.log(`listen http://localhost:${port}`);
-    console.log('press ctrl + c to stop to listen');
+	console.log(`listen http://localhost:${port}`);
+	console.log('press ctrl + c to stop to listen');
 });
