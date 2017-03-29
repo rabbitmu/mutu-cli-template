@@ -1,10 +1,7 @@
 export default {
 	name: 'Example',
 	props: {
-		name: {
-			type: 'String',
-			required: true
-		}
+		name: String
 	},
 	render(h) { // eslint-disable-line no-unused-vars
 		const { name } = this;
