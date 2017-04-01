@@ -9,7 +9,7 @@ const ROOT_PATH = path.join(__dirname, './');
 const TEMPLATE_PATH = path.join(__dirname, './', 'template');
 
 // 无需编译文件存放目录
-const STATIC_PATH = path.join(__dirname, './', 'project/static');
+const STATIC_PATH = path.join(__dirname, './', 'src/static');
 
 // 插件列表
 const plugins = [
@@ -39,7 +39,7 @@ const plugins = [
 
 module.exports = {
 	entry: {
-		app: './assets/app.js',
+		app: './src/app.js',
 		// vendor: ['babel-polyfill']
 	},
 	module: {
@@ -114,14 +114,15 @@ module.exports = {
 		alias: {
 			'vue$': 'vue/dist/vue.js',
 			'constants': path.join(ROOT_PATH, './', 'constants'),
-			'router': path.join(ROOT_PATH, './assets/', 'router'),
-			'store': path.join(ROOT_PATH, './assets/', 'store'),
-			'utils': path.join(ROOT_PATH, './assets/', 'utils'),
-			'style': path.join(ROOT_PATH, './assets/', 'style'),
-			'components': path.join(ROOT_PATH, './assets/', 'components'),
-			'container': path.join(ROOT_PATH, './assets/', 'container'),
-			'resources': path.join(ROOT_PATH, './assets/', 'resources')
+			'router': path.join(ROOT_PATH, './src/', 'router'),
+			'store': path.join(ROOT_PATH, './src/', 'store'),
+			'utils': path.join(ROOT_PATH, './src/', 'utils'),
+			'style': path.join(ROOT_PATH, './src/', 'style'),
+			'components': path.join(ROOT_PATH, './src/', 'components'),
+			'container': path.join(ROOT_PATH, './src/', 'container'),
+			'resources': path.join(ROOT_PATH, './src/', 'resources')
 		}
 	},
 	plugins: plugins
 };
+
