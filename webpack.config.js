@@ -18,7 +18,7 @@ const config = merge(baseConfig, {
 	entry: {
 		app: [
 			'webpack-hot-middleware/client',
-			'./assets/app.js'
+			'./src/app.js'
 		]
 	},
 	plugins: [
