@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+@import '_mixins';
+
+$animation_time: .2s;
+
+.toast {
+	@include setAbsolutePosition;
+	transition: opacity $animation_time linear;
+	padding: .2rem;
+	border-radius: .1rem;
+	background: rgba(0, 0, 0, .8);
+	font-size: .3rem;
+	color: #fff;
+}
