@@ -14,7 +14,7 @@ export default {
 			message: ''
 		};
 	},
-	render(h) {
+	render() {
 		const { message, visible } = this;
 
 		return (

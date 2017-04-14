@@ -8,7 +8,7 @@ export default {
 	computed: mapState({
 		name: state => state.name
 	}),
-	render(h) { // eslint-disable-line no-unused-vars
+	render() {
 		const { name } = this;
 
 		return (

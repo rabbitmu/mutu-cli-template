@@ -3,7 +3,7 @@ export default {
 	props: {
 		name: String
 	},
-	render(h) { // eslint-disable-line no-unused-vars
+	render() {
 		const { name } = this;
 
 		return (
