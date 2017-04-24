@@ -12,7 +12,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const baseConfig = require('./webpack.base.config');
 
-const COMPILE_PATH = path.join(__dirname, './dev_dist/');
+const COMPILE_PATH = path.join(__dirname, '../dev_dist/');
 
 const config = merge(baseConfig, {
 	entry: {
@@ -22,8 +22,6 @@ const config = merge(baseConfig, {
 		]
 	},
 	plugins: [
-		// new CleanWebpackPlugin([DIST_PATH]),
-		// new DashboardPlugin(),
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),

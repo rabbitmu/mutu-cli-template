@@ -5,11 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 // 路径
-const ROOT_PATH = path.join(__dirname, './');
-const TEMPLATE_PATH = path.join(__dirname, './', 'template');
-
-// 无需编译文件存放目录
-const STATIC_PATH = path.join(__dirname, './', 'src/static');
+const ROOT_PATH = path.join(__dirname, '../');
+const TEMPLATE_PATH = path.join(__dirname, '../', 'template');
 
 // 插件列表
 const plugins = [
@@ -38,10 +35,6 @@ const plugins = [
 ];
 
 module.exports = {
-	entry: {
-		app: './src/app.js',
-		// vendor: ['babel-polyfill']
-	},
 	module: {
 		loaders: [
 			{

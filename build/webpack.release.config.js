@@ -12,7 +12,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const baseConfig = require('./webpack.base.config');
 
-const DIST_PATH = path.join(__dirname, './dist/');
+const DIST_PATH = path.join(__dirname, '../dist/');
 
 const config = merge(baseConfig, {
 	plugins: [
@@ -30,6 +30,9 @@ const config = merge(baseConfig, {
 	],
 	debug: false,
 	devtool: false,
+	entry: {
+		app: './src/app.js'
+	},
 	output: {
 		path: DIST_PATH,
 		filename: '[name].bundle.js'
