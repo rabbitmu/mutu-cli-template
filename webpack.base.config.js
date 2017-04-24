@@ -120,7 +120,8 @@ module.exports = {
 			'style': path.join(ROOT_PATH, './src/', 'style'),
 			'components': path.join(ROOT_PATH, './src/', 'components'),
 			'container': path.join(ROOT_PATH, './src/', 'container'),
-			'resources': path.join(ROOT_PATH, './src/', 'resources')
+			'resources': path.join(ROOT_PATH, './src/', 'resources'),
+			'static': path.join(ROOT_PATH, './src/', 'static')
 		}
 	},
 	plugins: plugins

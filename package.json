@@ -4,7 +4,7 @@
   "description": "a vuex app",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha --compilers js:babel-core/register --slow 500",
     "start": "cross-env NODE_ENV=development babel-node debug server/app.js",
     "dev:compile": "cross-env NODE_ENV=development webpack --colors --progress",
     "release": "cross-env NODE_ENV=production webpack --config ./webpack.release.config.js --colors --progress"
@@ -41,6 +41,7 @@
     "babel-preset-stage-2": "^6.13.0",
     "babel-runtime": "^6.11.6",
     "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.10",
     "connect": "^3.5.0",
     "connect-history-api-fallback": "^1.3.0",
@@ -56,6 +57,7 @@
     "json-loader": "^0.5.4",
     "keymirror": "^0.1.1",
     "lodash": "^4.17.2",
+    "mocha": "^3.2.0",
     "moment": "^2.17.0",
     "node-sass": "^3.10.1",
     "postcss-loader": "^1.3.3",
