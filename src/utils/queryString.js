@@ -39,6 +39,7 @@ export class QueryString {
 
 		return queryString.join('&');
 	}
+
 	getLastPathname() {
 		let str = window.location.pathname;
 		return str.substring(0, str.lastIndexOf('/') + 1);
