@@ -1,6 +1,8 @@
 /**
  * vue-router路径映射
  */
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
 // 路由组件
 import App from 'container/App';
@@ -13,4 +15,10 @@ const routes = [
 	}
 ];
 
-export default routes;
+// 创建router实例
+const router = new VueRouter({
+	mode: 'history',
+	routes
+});
+
+export default router;

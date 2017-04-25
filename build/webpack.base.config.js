@@ -10,6 +10,10 @@ const TEMPLATE_PATH = path.join(__dirname, '../', 'template');
 
 // 插件列表
 const plugins = [
+	// 创建全局变量
+	new webpack.ProvidePlugin({
+		'Vue': 'vue'
+	}),
 	// 共享代码
 	new webpack.optimize.CommonsChunkPlugin({
 		name: 'common',
@@ -30,7 +34,7 @@ const plugins = [
 		},
 		filename: 'app.html',
 		template: TEMPLATE_PATH + '/app.html',
-		chunks: ['common', 'app']
+		chunks: ['common', 'app', 'vue']
 	})
 ];
 
