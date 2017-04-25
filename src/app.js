@@ -1,8 +1,4 @@
 import 'style/app.scss';
-
-import VueRouter from 'vue-router';
-Vue.use(VueRouter);
-
 import router from 'router/router';
 
 // 挂载根实例
