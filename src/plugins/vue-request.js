@@ -25,14 +25,7 @@ function request({ url, method = 'get', data = {} }) {
 		options = { ...options, data };
 	}
 
-	return axios(options).then(res => {
-			const { data } = res;
-			if(data.code === HTTP_RESULT.SUCCESS) {
-				return data;
-			} else {
-				return Promise.reject(data.msg);
-			}
-		});
+	return axios(options);
 };
 
 export default {
