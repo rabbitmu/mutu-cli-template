@@ -6,7 +6,7 @@ export default {
 	render() {
 		const style = {
 			overflowY: 'scroll',
-			maxHeight: '100%'
+			height: '100%'
 		};
 		return (
 			<div
