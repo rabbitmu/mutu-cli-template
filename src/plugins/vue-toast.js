@@ -41,4 +41,9 @@ function Toast(options = '') {
 	}, 0);
 };
 
-export default Toast;
+export default {
+	install(Vue) {
+		Vue.toast = Toast;
+		Vue.prototype.$toast = Toast;
+	}
+};
