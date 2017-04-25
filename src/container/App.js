@@ -1,6 +1,7 @@
 import store from 'store/store';
 import { mapState } from 'vuex';
 import Example from 'components/Example';
+import throttle from 'utils/throttle';
 
 export default {
 	name: 'App',
@@ -10,9 +11,15 @@ export default {
 	}),
 	render() {
 		const { name } = this;
+		const style = {
+			overflowY: 'scroll',
+			maxHeight: '100%',
+			textAlign: 'center',
+			fontSize: '46px'
+		};
 
 		return (
-			<div style={ { textAlign: 'center', fontSize: '46px' } }>
+			<div style={ style }>
 				<Example name={ name } />
 			</div>
 		);
