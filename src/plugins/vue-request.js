@@ -5,7 +5,6 @@
  * axios({ url: '', data: { token: '' } });
  */
 import axios from 'axios';
-import { HTTP_RESULT } from 'constants/HTTP';
 
 // 设置请求根路径
 axios.defaults.baseURL = '';
