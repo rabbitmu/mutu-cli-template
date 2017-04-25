@@ -36,20 +36,19 @@ app.use(bodyParser.json());
 
 // 设置静态目录
 app.use('/static', express.static(path.join(__dirname, staticResourceDir)));
-// app.use('/map', express.static(path.join(__dirname, staticMapDir)));
 
 // 控制api路由根路径
 app.use('/api', apiRoute);
 
 // 主路由
-app.use('/app', (req, res, next) => {
-	res.sendFile(path.join(__dirname, staticResourceDir, 'app.html'));
-});
+// app.use('/app', (req, res, next) => {
+// 	res.sendFile(path.join(__dirname, staticResourceDir, 'app.html'));
+// });
 
-// 重定向到`/app`
-app.use('/', (req, res) => {
-	res.status(302).redirect('/app');
-});
+// // 重定向到`/app`
+// app.use('/', (req, res) => {
+// 	res.status(302).redirect('/app');
+// });
 
 // history-api-fallback
 app.use(history());

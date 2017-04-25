@@ -12,12 +12,15 @@ const routes = [
 	{
 		path: '/app',
 		component: App
+	},
+	{
+		path: '*',
+		redirect: '/app'
 	}
 ];
 
 // 创建router实例
 const router = new VueRouter({
-	mode: 'history',
 	routes
 });
 

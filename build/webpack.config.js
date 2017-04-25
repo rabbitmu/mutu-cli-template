@@ -36,7 +36,7 @@ const config = merge(baseConfig, {
 	output: {
 		path: COMPILE_PATH,
 		filename: '[name].bundle.js',
-		publicPath: '/static'
+		publicPath: '/'
 	},
 	stats: {
 		colors: true,
