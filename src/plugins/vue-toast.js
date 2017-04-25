@@ -1,7 +1,7 @@
 import component from 'components/Toast';
 
 const ToastConstructor = Vue.extend(component);
-const canToast = true; // 控制点击次数
+let canToast = true; // 控制点击次数
 
 const getInstance = () => {
 	return new ToastConstructor({
