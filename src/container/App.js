@@ -1,7 +1,7 @@
 import store from 'store/store';
 import { mapState } from 'vuex';
+import Scroller from 'components/Scroller';
 import Example from 'components/Example';
-import throttle from 'utils/throttle';
 
 export default {
 	name: 'App',
@@ -19,9 +19,9 @@ export default {
 		};
 
 		return (
-			<div style={ style }>
+			<Scroller>
 				<Example name={ name } />
-			</div>
+			</Scroller>
 		);
 	}
 };
