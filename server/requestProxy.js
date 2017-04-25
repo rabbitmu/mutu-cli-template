@@ -72,11 +72,6 @@ export default {
 
 		let response = await fetch(url);
 
-		// if (response.status === 200) {
-		// 	return await response.json();
-		// } else {
-		// 	return await response.text();
-		// }
 		return await response.json().then((data) => {
 			if (global.DEBUG) {
 				// showData(data, url);

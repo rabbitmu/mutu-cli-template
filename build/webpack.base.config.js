@@ -118,7 +118,8 @@ module.exports = {
 			'components': path.join(ROOT_PATH, './src/', 'components'),
 			'container': path.join(ROOT_PATH, './src/', 'container'),
 			'resources': path.join(ROOT_PATH, './src/', 'resources'),
-			'static': path.join(ROOT_PATH, './src/', 'static')
+			'static': path.join(ROOT_PATH, './src/', 'static'),
+			'plugins': path.join(ROOT_PATH, './src/', 'plugins')
 		}
 	},
 	plugins: plugins

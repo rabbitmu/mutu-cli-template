@@ -10,7 +10,7 @@ import { HTTP_RESULT } from 'constants/HTTP';
 // 设置请求根路径
 axios.defaults.baseURL = '';
 
-export default function({ url, method = 'get', data }) {
+function request({ url, method = 'get', data = {} }) {
 	let options = { url, method };
 
 	// 区分请求方式
@@ -33,4 +33,11 @@ export default function({ url, method = 'get', data }) {
 				return Promise.reject(data.msg);
 			}
 		});
+};
+
+export default {
+	install(Vue) {
+		Vue.request = request;
+		Vue.prototype.$request = request;
+	}
 };
