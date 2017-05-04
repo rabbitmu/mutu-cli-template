@@ -1,7 +1,6 @@
-import store from 'store/store';
+import store from 'store';
 import { mapState } from 'vuex';
-import Scroller from 'components/Scroller';
-import Example from 'components/Example';
+import { Scroller, Example } from 'components';
 
 export default {
 	name: 'App',
