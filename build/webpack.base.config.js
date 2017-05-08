@@ -57,7 +57,7 @@ module.exports = {
 			{
 				// use sass-loader for *.scss files
 				test: /\.scss/i,
-				loader: ExtractTextPlugin.extract('css!sass'),
+				loader: ExtractTextPlugin.extract('css!postcss!sass'),
 				exclude: /node_modules/
 			},
 			{
