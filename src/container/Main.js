@@ -10,12 +10,6 @@ export default {
 	}),
 	render() {
 		const { name } = this;
-		const style = {
-			overflowY: 'scroll',
-			maxHeight: '100%',
-			textAlign: 'center',
-			fontSize: '46px'
-		};
 
 		return (
 			<Scroller>
