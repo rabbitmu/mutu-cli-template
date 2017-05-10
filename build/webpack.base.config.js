@@ -16,7 +16,7 @@ const plugins = [
 	}),
 	// 共享代码
 	new webpack.optimize.CommonsChunkPlugin({
-		name: 'common',
+		name: 'vendor',
 		minChunks: 2
 	}),
 	// 分离CSS文件
@@ -34,7 +34,7 @@ const plugins = [
 		},
 		filename: 'app.html',
 		template: TEMPLATE_PATH + '/app.html',
-		chunks: ['common', 'app', 'vue']
+		chunks: ['vendor', 'app']
 	})
 ];
 

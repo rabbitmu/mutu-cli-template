@@ -3,10 +3,8 @@
   */
 
 const webpack = require('webpack');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 const merge = require('webpack-merge');
 const path = require('path');
-const os = require('os');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -32,11 +30,17 @@ const config = merge(baseConfig, {
 	debug: false,
 	devtool: false,
 	entry: {
-		app: './src/app.js'
+		app: './src/app.js',
+		vendor: [
+			'vue',
+			'vue-router',
+			'vuex'
+		]
 	},
 	output: {
 		path: DIST_PATH,
-		filename: '[name].bundle.js'
+		filename: '[name].bundle.js',
+		chunkFilename: '[name].chunk.js'
 	}
 });
 

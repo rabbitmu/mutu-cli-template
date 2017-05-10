@@ -3,12 +3,8 @@
   */
 
 const webpack = require('webpack');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 const merge = require('webpack-merge');
 const path = require('path');
-const os = require('os');
-
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const baseConfig = require('./webpack.base.config');
 
@@ -19,6 +15,11 @@ const config = merge(baseConfig, {
 		app: [
 			'webpack-hot-middleware/client',
 			'./src/app.js'
+		],
+		vendor: [
+			'vue',
+			'vue-router',
+			'vuex'
 		]
 	},
 	plugins: [
@@ -32,11 +33,12 @@ const config = merge(baseConfig, {
 		})
 	],
 	debug: true,
-	devtool: 'source-map',
+	devtool: 'eval-source-map',
 	output: {
 		path: COMPILE_PATH,
 		filename: '[name].bundle.js',
-		publicPath: '/'
+		publicPath: '/',
+		chunkFilename: '[name].chunk.js'
 	},
 	stats: {
 		colors: true,
@@ -49,11 +51,6 @@ const config = merge(baseConfig, {
 	watchOptions: {
 		aggregateTimeout: 500, // ms, default is 300
 		poll: true
-	},
-	devServer: {
-		historyApiFallback: {
-			index: '/app.html'
-		}
 	}
 });
 
