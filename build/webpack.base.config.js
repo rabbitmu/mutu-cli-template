@@ -16,8 +16,7 @@ const plugins = [
 	}),
 	// 共享代码
 	new webpack.optimize.CommonsChunkPlugin({
-		name: 'vendor',
-		minChunks: 2
+		name: 'vendor'
 	}),
 	// 分离CSS文件
 	new ExtractTextPlugin('[name].style.css', {

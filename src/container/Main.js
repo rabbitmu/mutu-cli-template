@@ -3,7 +3,7 @@ import { mapState } from 'vuex';
 import { Scroller, Example } from 'components';
 
 export default {
-	name: 'App',
+	name: 'Main',
 	store,
 	computed: mapState({
 		name: state => state.name

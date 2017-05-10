@@ -4,18 +4,22 @@
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-// 路由组件
-import App from 'container/App';
+// 异步路由组件
+const Main = resolve => {
+	require.ensure(['../container/Main'], () => {
+		resolve(require('../container/Main').default);
+	}, 'main');
+};
 
 // 定义路由
 const routes = [
 	{
-		path: '/app',
-		component: App
+		path: '/main',
+		component: Main
 	},
 	{
 		path: '*',
-		redirect: '/app'
+		redirect: '/main'
 	}
 ];
 
