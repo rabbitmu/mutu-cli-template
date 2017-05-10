@@ -2,16 +2,16 @@
   * production env
   */
 
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const path = require('path');
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const path = require('path')
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-const baseConfig = require('./webpack.base.config');
+const baseConfig = require('./webpack.base.config')
 
-const DIST_PATH = path.join(__dirname, '../dist/');
-const CLEAN_PATH = path.join(__dirname, './dist/');
+const DIST_PATH = path.join(__dirname, '../dist/')
+const CLEAN_PATH = path.join(__dirname, './dist/')
 
 const config = merge(baseConfig, {
 	plugins: [
@@ -42,6 +42,6 @@ const config = merge(baseConfig, {
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].lazy.js'
 	}
-});
+})
 
-module.exports = config;
+module.exports = config

@@ -1,6 +1,6 @@
-import store from '../store';
-import { mapState } from 'vuex';
-import { Scroller, Example } from 'components';
+import store from '../store'
+import { mapState } from 'vuex'
+import { Scroller, Example } from 'components'
 
 export default {
 	name: 'Main',
@@ -9,12 +9,12 @@ export default {
 		name: state => state.name
 	}),
 	render() {
-		const { name } = this;
+		const { name } = this
 
 		return (
 			<Scroller>
 				<Example name={ name } />
 			</Scroller>
-		);
+		)
 	}
-};
+}

@@ -1,12 +1,12 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TransferWebpackPlugin = require('transfer-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TransferWebpackPlugin = require('transfer-webpack-plugin')
 
 // 路径
-const ROOT_PATH = path.join(__dirname, '../');
-const TEMPLATE_PATH = path.join(__dirname, '../', 'template');
+const ROOT_PATH = path.join(__dirname, '../')
+const TEMPLATE_PATH = path.join(__dirname, '../', 'template')
 
 // 插件列表
 const plugins = [
@@ -35,7 +35,7 @@ const plugins = [
 		template: TEMPLATE_PATH + '/app.html',
 		chunks: ['vendor', 'app']
 	})
-];
+]
 
 module.exports = {
 	module: {
@@ -97,5 +97,5 @@ module.exports = {
 		}
 	},
 	plugins: plugins
-};
+}
 

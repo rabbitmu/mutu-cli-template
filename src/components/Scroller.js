@@ -7,11 +7,11 @@ export default {
 		const style = {
 			overflowY: 'scroll',
 			height: '100%'
-		};
+		}
 		return (
 			<div
 				style={ style }
 				class="scroller">{ this.$slots.default }</div>
-		);
+		)
 	}
-};
+}

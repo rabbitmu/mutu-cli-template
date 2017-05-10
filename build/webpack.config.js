@@ -2,13 +2,13 @@
   * development env
   */
 
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const path = require('path');
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const path = require('path')
 
-const baseConfig = require('./webpack.base.config');
+const baseConfig = require('./webpack.base.config')
 
-const COMPILE_PATH = path.join(__dirname, '../dev_dist/');
+const COMPILE_PATH = path.join(__dirname, '../dev_dist/')
 
 const config = merge(baseConfig, {
 	entry: {
@@ -52,6 +52,6 @@ const config = merge(baseConfig, {
 		aggregateTimeout: 500, // ms, default is 300
 		poll: true
 	}
-});
+})
 
-module.exports = config;
+module.exports = config

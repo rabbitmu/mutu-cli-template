@@ -4,10 +4,10 @@ export default {
 		name: String
 	},
 	render() {
-		const { name } = this;
+		const { name } = this
 
 		return (
 			<div>Hello { name }</div>
-		);
+		)
 	}
-};
+}

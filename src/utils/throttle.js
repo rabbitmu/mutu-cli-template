@@ -1,11 +1,11 @@
 export default function({ action, interval }) {
-	let timer;
+	let timer
 
 	return function() {
-		clearTimeout(timer);
+		clearTimeout(timer)
 		timer = setTimeout(() => {
-			console.log(timer);
-			action();
-		}, interval || 50);
-	};
-};
+			console.log(timer)
+			action()
+		}, interval || 50)
+	}
+}

@@ -3,6 +3,6 @@
  */
 const HTTP_RESULT = {
 	SUCCESS: 99999
-};
+}
 
-export { HTTP_RESULT };
+export { HTTP_RESULT }

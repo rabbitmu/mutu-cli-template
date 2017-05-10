@@ -1,5 +1,5 @@
-import Scroller from './Scroller';
-import Example from './Example';
+import Scroller from './Scroller'
+import Example from './Example'
 
-export { Scroller as Scroller };
-export { Example as Example };
+export { Scroller as Scroller }
+export { Example as Example }

@@ -1,5 +1,5 @@
-import './style/app.scss';
-import router from './router';
+import './style/app.scss'
+import router from './router'
 
 // 挂载根实例
 const mounter = new Vue({
@@ -9,4 +9,4 @@ const mounter = new Vue({
 			<router-view />
 		)
 	}
-}).$mount('#mount');
+}).$mount('#mount')
