@@ -1,4 +1,4 @@
-import store from 'store';
+import store from '../store';
 import { mapState } from 'vuex';
 import { Scroller, Example } from 'components';
 

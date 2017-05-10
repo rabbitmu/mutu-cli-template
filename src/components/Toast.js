@@ -1,4 +1,4 @@
-import 'style/Toast.scss';
+import '../style/Toast.scss';
 
 export default {
 	name: 'Toast',

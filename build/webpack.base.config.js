@@ -93,15 +93,7 @@ module.exports = {
 		alias: {
 			'vue$': 'vue/dist/vue.js',
 			'constants': path.join(ROOT_PATH, './', 'constants'),
-			'router': path.join(ROOT_PATH, './src/', 'router'),
-			'store': path.join(ROOT_PATH, './src/', 'store'),
-			'utils': path.join(ROOT_PATH, './src/', 'utils'),
-			'style': path.join(ROOT_PATH, './src/', 'style'),
-			'components': path.join(ROOT_PATH, './src/', 'components'),
-			'container': path.join(ROOT_PATH, './src/', 'container'),
-			'resources': path.join(ROOT_PATH, './src/', 'resources'),
-			'static': path.join(ROOT_PATH, './src/', 'static'),
-			'plugins': path.join(ROOT_PATH, './src/', 'plugins')
+			'components': path.join(ROOT_PATH, './src/', 'components')
 		}
 	},
 	plugins: plugins
