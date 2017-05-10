@@ -13,10 +13,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 
 const DIST_PATH = path.join(__dirname, '../dist/');
+const CLEAN_PATH = path.join(__dirname, './dist/');
 
 const config = merge(baseConfig, {
 	plugins: [
-		new CleanWebpackPlugin([DIST_PATH]),
+		new CleanWebpackPlugin([CLEAN_PATH]),
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: '"production"'
