@@ -42,11 +42,6 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				// use vue-loader for *.vue files
-				test: /\.vue$/,
-				loader: 'vue'
-			},
-			{
 				// use babel-loader for *.js files
 				test: /\.js$/,
 				loader: 'babel',
@@ -93,18 +88,6 @@ module.exports = {
 				loader: 'url?limit=10000&minetype=image/svg+xml'
 			}
 		]
-	},
-	vue: {
-		// configure autoprefixer
-		autoprefixer: {
-			browsers: ['last 5 versions']
-		},
-		loaders: {
-			// css
-			css: ExtractTextPlugin.extract("css-loader"),
-			// sass
-			sass: ExtractTextPlugin.extract("css-loader!sass-loader")
-		}
 	},
 	resolve: {
 		extensions: ['', '.js'],
