@@ -21,18 +21,12 @@ const config = merge(baseConfig, {
 				NODE_ENV: '"production"'
 			}
 		}),
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
-			}
-		})
+		new webpack.optimize.UglifyJsPlugin()
 	],
-	debug: false,
-	devtool: false,
 	entry: {
 		app: './src/app.js',
 		vendor: [
-			'vue',
+			'vue/dist/vue.runtime.esm.js',
 			'vue-router',
 			'vuex'
 		]

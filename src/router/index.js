@@ -6,9 +6,7 @@ Vue.use(VueRouter)
 
 // 异步路由组件
 const Main = resolve => {
-	require.ensure(['../container/Main'], () => {
-		resolve(require('../container/Main').default)
-	}, 'main')
+	import('../container/Main').then(module => resolve(module.default))
 }
 
 // 定义路由

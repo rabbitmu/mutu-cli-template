@@ -1,6 +1,7 @@
 import store from '../store'
 import { mapState } from 'vuex'
 import { Scroller, Example } from 'components'
+import pic from '../resources/favicon.jpg'
 
 export default {
 	name: 'Main',

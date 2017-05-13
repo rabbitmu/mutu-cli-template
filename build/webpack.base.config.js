@@ -12,14 +12,15 @@ const TEMPLATE_PATH = path.join(__dirname, '../', 'template')
 const plugins = [
 	// 创建全局变量
 	new webpack.ProvidePlugin({
-		'Vue': 'vue'
+		'Vue': [ 'vue/dist/vue.runtime.esm.js', 'default' ]
 	}),
-	// 共享代码
+	// code-spliting
 	new webpack.optimize.CommonsChunkPlugin({
 		name: 'vendor'
 	}),
 	// 分离CSS文件
-	new ExtractTextPlugin('[name].style.css', {
+	new ExtractTextPlugin({
+		filename: '[name].bundle.css',
 		disable: false,
 		allChunks: true
 	}),
@@ -38,12 +39,19 @@ const plugins = [
 ]
 
 module.exports = {
+	resolve: {
+		extensions: ['.js'],
+		alias: {
+			'constants': path.join(ROOT_PATH, './', 'constants'),
+			'components': path.join(ROOT_PATH, './src/', 'components')
+		}
+	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				// use babel-loader for *.js files
 				test: /\.js$/,
-				loader: 'babel',
+				loader: 'babel-loader',
 				// important: exclude files in node_modules
 				// otherwise it's going to be really slow!
 				exclude: /node_modules/
@@ -51,50 +59,26 @@ module.exports = {
 			{
 				// use sass-loader for *.scss files
 				test: /\.scss/i,
-				loader: ExtractTextPlugin.extract('css!postcss!sass'),
-				exclude: /node_modules/
-			},
-			{
-				// load json file
-				test: /\.json$/,
-				loader: 'json-loader'
+				use: ExtractTextPlugin.extract({
+					use: [
+						'css-loader',
+						'postcss-loader',
+						'sass-loader'
+					]
+				})
 			},
 			{
 				// load image file
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				loaders: [
-					'file?hash=sha512&digest=hex&limit=10000&name=[hash].[ext]'
-				]
-			},
-			{
-				// font file
-				test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-				loader: 'url?limit=10000&minetype=application/font-woff'
-			}, {
-				test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-				loader: 'url?limit=10000&minetype=application/font-woff'
-			}, {
-				test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-				loader: 'url?limit=10000&minetype=application/octet-stream'
-			}, {
-				test: /\.ijmap(\?v=\d+\.\d+\.\d+)?$/,
-				loader: 'url?limit=10000&minetype=application/font-woff'
-			}, {
-				test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-				loader: 'file'
-			}, {
-				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-				loader: 'url?limit=10000&minetype=image/svg+xml'
+				loader: 'file-loader',
+				options: {
+					hash: 'sha512',
+					digest: 'hex',
+					limit: '10000',
+					name: '[hash].[ext]'
+				}
 			}
 		]
-	},
-	resolve: {
-		extensions: ['', '.js'],
-		alias: {
-			'vue$': 'vue/dist/vue.js',
-			'constants': path.join(ROOT_PATH, './', 'constants'),
-			'components': path.join(ROOT_PATH, './src/', 'components')
-		}
 	},
 	plugins: plugins
 }
