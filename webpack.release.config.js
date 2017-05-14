@@ -5,6 +5,7 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const path = require('path')
+const ManifestPlugin = require('webpack-manifest-plugin')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -22,7 +23,8 @@ const config = merge(baseConfig, {
 				NODE_ENV: '"production"'
 			}
 		}),
-		new webpack.optimize.UglifyJsPlugin()
+		new webpack.optimize.UglifyJsPlugin(),
+		new ManifestPlugin()
 	],
 	entry: {
 		app: './src/app.js',

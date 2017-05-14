@@ -5,6 +5,7 @@ npm-debug.log*
 
 # DEV_Dist
 dev_dist
+dist
 
 # Runtime data
 pids
