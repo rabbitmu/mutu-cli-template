@@ -42,7 +42,7 @@ const config = merge(baseConfig, {
 	output: {
 		path: COMPILE_PATH,
 		filename: '[name].bundle.js',
-		chunkFilename: '[name].lazy.js'
+		chunkFilename: '[name].chunk.js'
 	}
 })
 

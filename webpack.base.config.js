@@ -34,13 +34,9 @@ const plugins = [
 	new HtmlWebpackPlugin({
 		inject: true,
 		hash: true,
-		minify: {
-			removeComments: false,
-			collapseWhitespace: false
-		},
 		filename: 'app.html',
 		template: TEMPLATE_PATH + '/app.html',
-		chunks: ['vendor', 'app']
+		chunks: ['vendor', 'manifest', 'app']
 	})
 ]
 

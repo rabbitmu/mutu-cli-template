@@ -37,7 +37,7 @@ const config = merge(baseConfig, {
 	output: {
 		path: DIST_PATH,
 		filename: '[name].[chunkhash].bundle.js',
-		chunkFilename: '[name].[chunkhash].lazy.js'
+		chunkFilename: '[name].[chunkhash].chunk.js'
 	}
 })
 
