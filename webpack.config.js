@@ -8,7 +8,7 @@ const path = require('path')
 
 const baseConfig = require('./webpack.base.config')
 
-const COMPILE_PATH = path.join(__dirname, '../dev_dist/')
+const COMPILE_PATH = path.join(__dirname, './dev_dist/')
 
 const config = merge(baseConfig, {
 	plugins: [

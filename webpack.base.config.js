@@ -5,8 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TransferWebpackPlugin = require('transfer-webpack-plugin')
 
 // 路径
-const ROOT_PATH = path.join(__dirname, '../')
-const TEMPLATE_PATH = path.join(__dirname, '../', 'template')
+const ROOT_PATH = path.join(__dirname, './')
+const TEMPLATE_PATH = path.join(__dirname, './', 'template')
 
 // 插件列表
 const plugins = [
@@ -16,7 +16,13 @@ const plugins = [
 	}),
 	// code-spliting
 	new webpack.optimize.CommonsChunkPlugin({
-		name: 'vendor'
+		name: 'vendor',
+		minChunks: module => {
+			return module.context && /node\_modules/.test(module.context)
+		}
+	}),
+	new webpack.optimize.CommonsChunkPlugin({
+		name: 'manifest',
 	}),
 	// 分离CSS文件
 	new ExtractTextPlugin({

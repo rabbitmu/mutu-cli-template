@@ -10,12 +10,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const baseConfig = require('./webpack.base.config')
 
-const DIST_PATH = path.join(__dirname, '../dist/')
-const CLEAN_PATH = path.join(__dirname, './dist/')
+const DIST_PATH = path.join(__dirname, './dist/')
 
 const config = merge(baseConfig, {
 	plugins: [
-		new CleanWebpackPlugin([CLEAN_PATH]),
+		new CleanWebpackPlugin([DIST_PATH], {
+			root: __dirname
+		}),
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: '"production"'
@@ -33,8 +34,8 @@ const config = merge(baseConfig, {
 	},
 	output: {
 		path: DIST_PATH,
-		filename: '[name].bundle.js',
-		chunkFilename: '[name].lazy.js'
+		filename: '[name].[chunkhash].bundle.js',
+		chunkFilename: '[name].[chunkhash].lazy.js'
 	}
 })
 
