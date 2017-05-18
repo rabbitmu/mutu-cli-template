@@ -10,26 +10,26 @@ import axios from 'axios'
 axios.defaults.baseURL = ''
 
 function request({ url, method = 'get', data = {} }) {
-	let options = { url, method }
+    let options = { url, method }
 
-	// 区分请求方式
-	if(method === 'get') {
-		let query = ''
-		Object.entries(data).map(item => {
-			const sign = query ? '&' : '?'
-			query += `${sign}${item[0]}=${item[1]}`
-		})
-		options.url += query
-	} else {
-		options = { ...options, data }
-	}
+    // 区分请求方式
+    if(method === 'get') {
+        let query = ''
+        Object.entries(data).map(item => {
+            const sign = query ? '&' : '?'
+            query += `${sign}${item[0]}=${item[1]}`
+        })
+        options.url += query
+    } else {
+        options = { ...options, data }
+    }
 
-	return axios(options)
+    return axios(options)
 }
 
 export default {
-	install(Vue) {
-		Vue.request = request
-		Vue.prototype.$request = request
-	}
+    install(Vue) {
+        Vue.request = request
+        Vue.prototype.$request = request
+    }
 }

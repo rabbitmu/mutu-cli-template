@@ -13,11 +13,11 @@ const apiRoute = new express.Router()
 
 // api中转配置
 apiRoute.post('/*', (req, res) => {
-	let url = `/api${req.url}`
-	request(url, req.body)
-		.then((result) => {
-			res.json(result)
-		})
+    let url = `/api${req.url}`
+    request(url, req.body)
+        .then((result) => {
+            res.json(result)
+        })
 })
 
 export default apiRoute

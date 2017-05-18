@@ -1,37 +1,37 @@
 @charset 'utf-8';
 
 @mixin setIconBg($iconName, $position: center, $backgroundSize: contain) {
-	background: {
-		image: url(~resources/#{$iconName});
-		repeat: no-repeat;
-		size: $backgroundSize;
-		position: $position;
-	}
+    background: {
+        image: url(~resources/#{$iconName});
+        repeat: no-repeat;
+        size: $backgroundSize;
+        position: $position;
+    }
 }
 
 // 绝对定位，默认取上 & 左两个定位值
 // 如果不需要设置left/top，需传入$left/$top: null
 // @include absoluteCenter(50%, 50%);
 @mixin setAbsolutePosition($left: center, $top: center, $right: null, $bottom: null) {
-	position: absolute;
+    position: absolute;
 
-	@if $left == center and $top == center {
-		transform: translate(-50%, -50%);
-		$top: 50%;
-		$left: 50%;
-	} @else {
-		@if $left == center {
-			transform: translate(-50%, 0);
-			$left: 50%;
-		}
-		@if $top == center {
-			transform: translate(0, -50%);
-			$top: 50%;
-		}
-	}
+    @if $left == center and $top == center {
+        transform: translate(-50%, -50%);
+        $top: 50%;
+        $left: 50%;
+    } @else {
+        @if $left == center {
+            transform: translate(-50%, 0);
+            $left: 50%;
+        }
+        @if $top == center {
+            transform: translate(0, -50%);
+            $top: 50%;
+        }
+    }
 
-	left: $left;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
 }
