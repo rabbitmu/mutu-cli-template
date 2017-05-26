@@ -2,3 +2,13 @@
 
 // 公用模块
 @import '_reset';
+
+.scroller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #42b983;
+}

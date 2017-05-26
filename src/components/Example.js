@@ -7,7 +7,7 @@ export default {
         const { name } = this
 
         return (
-            <div>Hello { name }</div>
+            <h1>Hello { name }!</h1>
         )
     }
 }
