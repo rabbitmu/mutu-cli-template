@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TransferWebpackPlugin = require('transfer-webpack-plugin')
+const HappyPack = require('happypack')
 
 // 路径
 const ROOT_PATH = path.join(__dirname, './')
@@ -13,6 +14,11 @@ const plugins = [
     // 创建全局变量
     new webpack.ProvidePlugin({
         'Vue': [ 'vue/dist/vue.runtime.esm.js', 'default' ]
+    }),
+    // happypack打包
+    new HappyPack({
+        threads: 4,
+        loaders: ['babel-loader']
     }),
     // code-spliting
     new webpack.optimize.CommonsChunkPlugin({
@@ -52,8 +58,9 @@ module.exports = {
         rules: [
             {
                 // use babel-loader for *.js files
+                // use happypack for improve compile performance
                 test: /\.js$/,
-                loader: 'babel-loader',
+                loader: 'happypack/loader',
                 // important: exclude files in node_modules
                 // otherwise it's going to be really slow!
                 exclude: /node_modules/
