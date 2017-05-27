@@ -1,4 +1,4 @@
-{
+module.exports = {
     "prompts": {
         "name": {
             "type": "string",
