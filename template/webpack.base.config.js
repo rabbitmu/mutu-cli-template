@@ -40,7 +40,7 @@ const plugins = [
     new HtmlWebpackPlugin({
         inject: true,
         hash: true,
-        filename: 'app.html',
+        filename: 'index.html',
         template: TEMPLATE_PATH + '/app.html',
         chunks: ['vendor', 'manifest', 'app']
     })

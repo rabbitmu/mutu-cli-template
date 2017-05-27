@@ -31,7 +31,8 @@ const config = merge(baseConfig, {
     entry: {
         app: [
             'webpack-hot-middleware/client',
-            './src/app.js'
+            './src/app.js',
+            './mock/index.js'
         ],
         vendor: [
             'vue/dist/vue.runtime.esm.js',
