@@ -27,6 +27,6 @@ module.exports = {
     "filters": {
         "src/router/*": "router",
         "src/store/*": "state manager"
-    }
+    },
     "completeMessage": "Download Sucess"
 }
