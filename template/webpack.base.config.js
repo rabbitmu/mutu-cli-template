@@ -41,7 +41,7 @@ const plugins = [
         inject: true,
         hash: true,
         filename: 'index.html',
-        template: TEMPLATE_PATH + '/app.html',
+        template: 'index.html',
         chunks: ['vendor', 'manifest', 'app']
     })
 ]
