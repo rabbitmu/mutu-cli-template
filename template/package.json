@@ -1,14 +1,14 @@
 {
-  "name": "{{ name }}",
+  "name": "name",
   "version": "1.0.0",
-  "description": "{{ description }}",
+  "description": "description",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --slow 500",
     "start": "cross-env NODE_ENV=development babel-node debug server/app.js",
     "dev:compile": "cross-env NODE_ENV=development webpack --colors --progress",
     "release": "cross-env NODE_ENV=production webpack --config ./webpack.release.config.js --colors --progress"
   },
-  "author": "{{ author }}",
+  "author": "author",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.7.7",
