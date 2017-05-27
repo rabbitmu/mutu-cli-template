@@ -27,7 +27,7 @@ const config = merge(baseConfig, {
         new ManifestPlugin()
     ],
     entry: {
-        app: './src/app.js',
+        main: './src/main.js',
         vendor: [
             'vue/dist/vue.runtime.esm.js',
             'vue-router',

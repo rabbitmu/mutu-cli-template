@@ -29,9 +29,9 @@ const config = merge(baseConfig, {
         })
     ],
     entry: {
-        app: [
+        main: [
             'webpack-hot-middleware/client',
-            './src/app.js',
+            './src/main.js',
             './mock/index.js'
         ],
         vendor: [

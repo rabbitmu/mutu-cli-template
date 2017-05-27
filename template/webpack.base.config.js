@@ -42,7 +42,7 @@ const plugins = [
         hash: true,
         filename: 'index.html',
         template: 'index.html',
-        chunks: ['vendor', 'manifest', 'app']
+        chunks: ['vendor', 'manifest', 'main']
     })
 ]
 
