@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development babel-node debug server/app.js",
     "dev:compile": "cross-env NODE_ENV=development webpack --colors --progress",
     "release": "cross-env NODE_ENV=production webpack --config ./webpack.release.config.js --colors --progress"
-},
+  },
   "author": "{{ author }}",
   "license": "ISC",
   "dependencies": {
