@@ -14,19 +14,7 @@ module.exports = {
         "author": {
             "type": "string",
             "message": "Author"
-        },
-        "router": {
-            "type": "confirm",
-            "message": "Install Vue router?"
-        },
-        "state manager": {
-            "type": "confirm",
-            "message": "Install Vuex?"
         }
-    },
-    "filters": {
-        "src/router/*": "router",
-        "src/store/*": "state manager"
     },
     "completeMessage": "Download Sucess"
 }
