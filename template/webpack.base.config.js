@@ -4,10 +4,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TransferWebpackPlugin = require('transfer-webpack-plugin')
 const HappyPack = require('happypack')
+const SpritesmithPlugin = require('webpack-spritesmith')
 
 // 路径
 const ROOT_PATH = path.join(__dirname, './')
-const TEMPLATE_PATH = path.join(__dirname, './', 'template')
 
 // 插件列表
 const plugins = [
@@ -36,6 +36,20 @@ const plugins = [
         disable: false,
         allChunks: true
     }),
+    // 生成sprite图
+    new SpritesmithPlugin({
+        src: {
+            cwd: path.resolve(__dirname, './src/resources/sprite/'),
+            glob: '*.png'
+        },
+        target: {
+            image: path.resolve(__dirname, './src/resources/sprite.png'),
+            css: path.resolve(__dirname, './src/style/_sprite.scss')
+        },
+        apiOptions: {
+            cssImageRef: '~resources/sprite.png'
+        }
+    }),
     // 生成html文件
     new HtmlWebpackPlugin({
         inject: true,
@@ -50,6 +64,7 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
+            'resources': path.join(ROOT_PATH, './src/', 'resources'),
             'constants': path.join(ROOT_PATH, './', 'constants'),
             'components': path.join(ROOT_PATH, './src/', 'components')
         }
