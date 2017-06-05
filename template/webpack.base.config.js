@@ -46,6 +46,9 @@ const plugins = [
             image: path.resolve(__dirname, './src/resources/sprite.png'),
             css: path.resolve(__dirname, './src/style/_sprite.scss')
         },
+        spritesmithOptions: {
+            padding: 10
+        },
         apiOptions: {
             cssImageRef: '~resources/sprite.png'
         }
