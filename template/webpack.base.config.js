@@ -85,7 +85,12 @@ module.exports = {
                 test: /\.scss/i,
                 use: ExtractTextPlugin.extract({
                     use: [
-                        'css-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                minimize: process.env.NODE_ENV === 'production'
+                            }
+                        },
                         'postcss-loader',
                         'sass-loader'
                     ]
