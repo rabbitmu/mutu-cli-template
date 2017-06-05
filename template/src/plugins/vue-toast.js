@@ -1,7 +1,32 @@
-import component from 'components/Toast'
+/**
+ * 创建组件模板
+ */
+import '../style/Toast.scss'
+const ToastConstructor = Vue.extend({
+    name: 'Toast',
+    data() {
+        return {
+            /**
+             * 控制组件显示/隐藏
+             */
+            visible: false,
+            /**
+             * 组件显示信息
+             */
+            message: ''
+        }
+    },
+    render() {
+        const { message, visible } = this
 
-const ToastConstructor = Vue.extend(component)
-let canToast = true // 控制点击次数
+        return (
+            <div
+                class="toast"
+                style={ { opacity: visible ? 1 : 0 } }>{ message }</div>
+        )
+    }
+})
+let canToast = true // 控制toast次数
 
 const getInstance = () => {
     return new ToastConstructor({
@@ -30,7 +55,6 @@ function Toast(options = '') {
 
     document.body.appendChild(instance.$el)
     setTimeout(() => {
-        instance.$el.removeEventListener('transitionend', removeDom)
         instance.visible = true
 
         clearTimeout(timer)
