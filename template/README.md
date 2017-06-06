@@ -1,2 +1,2 @@
-## mutu-cli's vue.js project structure
+## A project template for vue-cli
 
