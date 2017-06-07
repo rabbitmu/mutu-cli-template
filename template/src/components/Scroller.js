@@ -3,7 +3,9 @@
  */
 export default {
     name: 'Scroller',
+    functional: true,
     render() {
+        const context = arguments[1]
         const style = {
             overflowY: 'scroll',
             height: '100%'
@@ -11,7 +13,7 @@ export default {
         return (
             <div
                 style={ style }
-                class="scroller">{ this.$slots.default }</div>
+                class="scroller">{ context.children }</div>
         )
     }
 }
