@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HappyPack = require('happypack')
 const SpritesmithPlugin = require('webpack-spritesmith')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 // 路径
 const ROOT_PATH = path.join(__dirname, './')
@@ -59,6 +60,13 @@ const plugins = [
         filename: 'index.html',
         template: 'index.html',
         chunks: ['vendor', 'manifest', 'main']
+    }),
+    new ImageminPlugin({
+        disable: process.env.NODE_ENV !== 'production',
+        text: /\.png$/,
+        pngquant: {
+            floyd: 1
+        }
     })
 ]
 
