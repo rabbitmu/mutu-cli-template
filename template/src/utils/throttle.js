@@ -4,8 +4,7 @@ export default function({ action, interval }) {
     return function() {
         clearTimeout(timer)
         timer = setTimeout(() => {
-            console.log(timer)
-            action()
+            action && action()
         }, interval || 50)
     }
 }
