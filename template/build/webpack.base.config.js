@@ -74,9 +74,9 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
-            'resources': path.join(ROOT_PATH, './src/', 'resources'),
-            'constants': path.join(ROOT_PATH, './', 'constants'),
-            'components': path.join(ROOT_PATH, './src/', 'components')
+            'resources': path.join(ROOT_PATH, '../src/', 'resources'),
+            'constants': path.join(ROOT_PATH, '../', 'constants'),
+            'components': path.join(ROOT_PATH, '../src/', 'components')
         }
     },
     module: {

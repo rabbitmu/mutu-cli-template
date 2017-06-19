@@ -10,12 +10,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const baseConfig = require('./webpack.base.config')
 
-const DIST_PATH = path.join(__dirname, './dist/')
+const DIST_PATH = path.join(__dirname, '../dist/')
 
 const config = merge(baseConfig, {
     plugins: [
         new CleanWebpackPlugin([DIST_PATH], {
-            root: __dirname
+            root: path.join(__dirname, '../')
         }),
         new webpack.DefinePlugin({
             'process.env': {

@@ -18,7 +18,7 @@ const staticResourceDir = `../dev_dist`
 if (__DEV__) {
     // 启动webpack热加载
     const webpack = require('webpack')
-    const config = require('../webpack.config')
+    const config = require('../build/webpack.config')
     const compiler = webpack(config)
 
     app.use(require('webpack-dev-middleware')(compiler, {
