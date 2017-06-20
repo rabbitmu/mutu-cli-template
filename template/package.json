@@ -4,7 +4,7 @@
   "description": "description",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --slow 500",
-    "start": "cross-env NODE_ENV=development babel-node debug server/app.js",
+    "start": "cross-env NODE_ENV=development babel-node server/app.js",
     "dev:compile": "cross-env NODE_ENV=development webpack --colors ./build/webpack.config.js  --progress",
     "release": "cross-env NODE_ENV=production webpack --config ./build/webpack.release.config.js --colors --progress"
   },
