@@ -33,7 +33,7 @@ const plugins = [
     // 分离CSS文件
     new ExtractTextPlugin({
         filename: '[name].bundle.css',
-        disable: false,
+        disable: process.env.NODE_ENV !== 'production',
         allChunks: true
     }),
     // 生成sprite图
@@ -103,7 +103,8 @@ module.exports = {
                         },
                         'postcss-loader',
                         'sass-loader'
-                    ]
+                    ],
+                    fallback: 'style-loader'
                 })
             },
             {
