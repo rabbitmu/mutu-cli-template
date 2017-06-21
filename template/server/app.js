@@ -21,8 +21,7 @@ const staticResourceDir = `../dev_dist`
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
     stats: {
-        colors: true,
-        chunks: false
+        colors: true
     },
     publicPath: webpackConfig.output.publicPath
 }))

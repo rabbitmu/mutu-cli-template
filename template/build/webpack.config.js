@@ -29,7 +29,7 @@ const config = merge(baseConfig, {
     ],
     entry: {
         main: [
-            'webpack-hot-middleware/client',
+            'webpack-hot-middleware/client?reload=true&noInfo=true',
             './src/main.js',
             './mock/index.js'
         ],
