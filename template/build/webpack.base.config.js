@@ -98,11 +98,17 @@ module.exports = {
                         {
                             loader: 'css-loader',
                             options: {
-                                minimize: process.env.NODE_ENV === 'production'
+                                minimize: process.env.NODE_ENV === 'production',
+                                sourceMap: true
                             }
                         },
                         'postcss-loader',
-                        'sass-loader'
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
                     ],
                     fallback: 'style-loader'
                 })
