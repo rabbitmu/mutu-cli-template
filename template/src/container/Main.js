@@ -14,7 +14,6 @@ export default {
 
         return (
             <Scroller>
-                <Example name={ name } />
             </Scroller>
         )
     }

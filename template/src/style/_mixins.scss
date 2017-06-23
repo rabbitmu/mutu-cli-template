@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+// 配置图片背景
 @mixin setIconBg($iconName, $position: center, $backgroundSize: contain) {
     background: {
         image: url(~resources/#{$iconName});
@@ -34,4 +35,12 @@
     top: $top;
     right: $right;
     bottom: $bottom;
+}
+
+// 单行文本溢出隐藏
+@mixin setTextOverflow($width) {
+    overflow: hidden;
+    width: $width;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
