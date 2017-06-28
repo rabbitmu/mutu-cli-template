@@ -22,13 +22,7 @@ const plugins = [
     }),
     // code-spliting
     new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
-        minChunks: module => {
-            return module.context && /node\_modules/.test(module.context)
-        }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest',
+        name: 'vendor'
     }),
     // 分离CSS文件
     new ExtractTextPlugin({
