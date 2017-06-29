@@ -54,7 +54,6 @@ const plugins = [
         hash: true,
         filename: 'index.html',
         template: 'index.html',
-        chunks: ['vendor', 'manifest', 'main']
     }),
     new ImageminPlugin({
         disable: process.env.NODE_ENV !== 'production',
