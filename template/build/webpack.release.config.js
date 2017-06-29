@@ -25,12 +25,12 @@ const config = merge(baseConfig, {
         new webpack.optimize.UglifyJsPlugin()
     ],
     entry: {
-        main: './src/main.js',
         vendor: [
             'vue/dist/vue.runtime.esm.js',
             'vue-router',
             'vuex'
-        ]
+        ],
+        main: './src/main.js'
     },
     output: {
         path: DIST_PATH,

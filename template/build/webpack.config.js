@@ -28,15 +28,15 @@ const config = merge(baseConfig, {
         })
     ],
     entry: {
-        main: [
-            'webpack-hot-middleware/client?reload=true&noInfo=true',
-            './src/main.js',
-            './mock/index.js'
-        ],
         vendor: [
             'vue/dist/vue.runtime.esm.js',
             'vue-router',
             'vuex'
+        ],
+        main: [
+            'webpack-hot-middleware/client?reload=true&noInfo=true',
+            './src/main.js',
+            './mock/index.js'
         ]
     },
     output: {

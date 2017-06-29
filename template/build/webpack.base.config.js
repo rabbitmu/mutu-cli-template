@@ -53,7 +53,7 @@ const plugins = [
         inject: true,
         hash: true,
         filename: 'index.html',
-        template: 'index.html',
+        template: 'index.html'
     }),
     new ImageminPlugin({
         disable: process.env.NODE_ENV !== 'production',
