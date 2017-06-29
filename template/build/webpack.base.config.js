@@ -17,6 +17,7 @@ const plugins = [
     }),
     // happypack打包
     new HappyPack({
+        cache: false,
         threads: 4,
         loaders: ['babel-loader']
     }),
