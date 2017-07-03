@@ -11,7 +11,7 @@ const ROOT_PATH = path.join(__dirname, './')
 
 // 插件列表
 const plugins = [
-    // 创建全局变量
+    // 创建vue module缺省值
     new webpack.ProvidePlugin({
         'Vue': [ 'vue/dist/vue.runtime.esm.js', 'default' ]
     }),
@@ -55,6 +55,7 @@ const plugins = [
         filename: 'index.html',
         template: 'index.html'
     }),
+    // compress image
     new ImageminPlugin({
         disable: process.env.NODE_ENV !== 'production',
         text: /\.png$/,
