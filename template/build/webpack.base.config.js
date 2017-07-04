@@ -34,12 +34,12 @@ const plugins = [
     // 生成sprite图
     new SpritesmithPlugin({
         src: {
-            cwd: path.resolve(__dirname, './src/resources/sprite/'),
+            cwd: path.resolve(__dirname, '../src/resources/sprite/'),
             glob: '*.png'
         },
         target: {
-            image: path.resolve(__dirname, './src/resources/sprite.png'),
-            css: path.resolve(__dirname, './src/style/_sprite.scss')
+            image: path.resolve(__dirname, '../src/resources/sprite.png'),
+            css: path.resolve(__dirname, '../src/style/_sprite.scss')
         },
         spritesmithOptions: {
             padding: 10
