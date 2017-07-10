@@ -29,9 +29,7 @@ const ToastConstructor = Vue.extend({
 let canToast = true // 控制toast次数
 
 const getInstance = () => {
-    return new ToastConstructor({
-        el: document.createElement('div')
-    })
+    return new ToastConstructor().$mount()
 }
 
 const removeDom = event => {
