@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HappyPack = require('happypack')
-const SpritesmithPlugin = require('webpack-spritesmith')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 // 路径
@@ -30,23 +29,6 @@ const plugins = [
         filename: '[name].bundle.css',
         disable: process.env.NODE_ENV !== 'production',
         allChunks: true
-    }),
-    // 生成sprite图
-    new SpritesmithPlugin({
-        src: {
-            cwd: path.resolve(__dirname, '../src/resources/sprite/'),
-            glob: '*.png'
-        },
-        target: {
-            image: path.resolve(__dirname, '../src/resources/sprite.png'),
-            css: path.resolve(__dirname, '../src/style/_sprite.scss')
-        },
-        spritesmithOptions: {
-            padding: 10
-        },
-        apiOptions: {
-            cssImageRef: '~resources/sprite.png'
-        }
     }),
     // 生成html文件
     new HtmlWebpackPlugin({
