@@ -1,7 +1,7 @@
 /**
  * 创建组件模板
  */
-import '../style/Toast.scss'
+import style from '../style/Toast.scss'
 const ToastConstructor = Vue.extend({
     name: 'Toast',
     data() {
@@ -21,7 +21,7 @@ const ToastConstructor = Vue.extend({
 
         return (
             <div
-                class="toast"
+                class={ style.toast }
                 style={ { opacity: visible ? 1 : 0 } }>{ message }</div>
         )
     }
