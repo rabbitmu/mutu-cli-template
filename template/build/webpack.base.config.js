@@ -79,13 +79,13 @@ module.exports = {
                                 sourceMap: true
                             }
                         },
-                        'postcss-loader',
                         {
-                            loader: 'sass-loader',
+                            loader: 'postcss-loader',
                             options: {
                                 sourceMap: true
                             }
-                        }
+                        },
+                        'sass-loader'
                     ],
                     fallback: 'style-loader'
                 })
