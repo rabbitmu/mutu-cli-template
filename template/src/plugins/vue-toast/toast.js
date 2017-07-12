@@ -1,7 +1,7 @@
 /**
  * 创建组件模板
  */
-import style from '../style/Toast.scss'
+import style from './style.scss'
 const ToastConstructor = Vue.extend({
     name: 'Toast',
     data() {
