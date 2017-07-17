@@ -1,14 +1,14 @@
 {
-  "name": "name",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "description",
+  "description": "{{ description }}",
   "scripts": {
     "lint": "eslint ./src --fix; exit 0",
     "start": "cross-env NODE_ENV=development babel-node debug server/app.js",
     "dev:compile": "cross-env NODE_ENV=development webpack --colors ./build/webpack.config.js  --progress",
     "release": "cross-env NODE_ENV=production webpack --config ./build/webpack.release.config.js --colors --progress"
   },
-  "author": "author",
+  "author": "{{ author }}",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
