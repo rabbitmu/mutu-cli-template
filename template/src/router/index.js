@@ -6,24 +6,24 @@ Vue.use(VueRouter)
 
 // 异步路由组件
 const Main = resolve => {
-	import('../container/Main').then(module => resolve(module.default))
+    import('../container/Main').then(module => resolve(module.default))
 }
 
 // 定义路由
 const routes = [
-	{
-		path: '/main',
-		component: Main
-	},
-	{
-		path: '*',
-		redirect: '/main'
-	}
+    {
+        path: '/main',
+        component: Main
+    },
+    {
+        path: '*',
+        redirect: '/main'
+    }
 ]
 
 // 创建router实例
 const router = new VueRouter({
-	routes
+    routes
 })
 
 export default router

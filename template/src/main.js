@@ -2,9 +2,9 @@ import './style/app.scss'
 import router from './router'
 
 // 挂载根实例
-const mounter = new Vue({
+new Vue({
     router,
-    render(h) {
+    render() {
         return (
             <router-view />
         )

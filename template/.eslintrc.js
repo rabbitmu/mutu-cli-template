@@ -1,22 +1,31 @@
 module.exports = {
+    "globals": {
+        "Vue": true,
+        "process": true
+    },
     "env": {
         "browser": true,
+        "commonjs": true,
         "es6": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaVersion": 2017,
         "ecmaFeatures": {
-            "jsx": true,
-            "experimentalObjectRestSpread": true
+            "experimentalObjectRestSpread": true,
+            "jsx": true
         },
         "sourceType": "module",
+        "allowImportExportEverywhere": true
     },
-    "plugins": ["react"],
+    "plugins": [
+        "react"
+    ],
     "rules": {
+        "react/jsx-uses-vars": 1,
         "indent": [
             "error",
-            "tab"
+            4
         ],
         "linebreak-style": [
             "error",
@@ -28,8 +37,7 @@ module.exports = {
         ],
         "semi": [
             "error",
-            "always"
-        ],
-        "react/jsx-uses-vars": "error"
+            "never"
+        ]
     }
-}
+};

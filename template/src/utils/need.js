@@ -12,7 +12,7 @@ export default (resource, done) => {
     if (supportOnload) {
         node.onload = done
         node.onerror = () => {
-            console.error(`${resource}加载失败`, node)
+            // console.error(`${resource}加载失败`, node)
         }
     } else {
         node.onreadystatechange = () => {
