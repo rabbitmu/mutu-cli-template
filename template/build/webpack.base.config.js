@@ -34,7 +34,7 @@ const plugins = [
         inject: true,
         hash: true,
         filename: 'index.html',
-        template: 'index.html'
+        template: 'template/index.html'
     }),
     // compress image
     new ImageminPlugin({
