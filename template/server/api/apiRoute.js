@@ -4,8 +4,6 @@
  */
 
 import express from 'express'
-import moment from 'moment'
-// import * as CONSTANT from '../../constants/api'
 import request from './middleware'
 
 // 创建路由节点

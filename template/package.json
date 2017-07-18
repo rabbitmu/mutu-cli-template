@@ -4,9 +4,9 @@
   "description": "{{ description }}",
   "scripts": {
     "lint": "eslint ./src --fix; exit 0",
-    "start": "cross-env NODE_ENV=development babel-node debug server/app.js",
+    "dev": "cross-env NODE_ENV=development babel-node debug server/app.js",
     "dev:compile": "cross-env NODE_ENV=development webpack --colors ./build/webpack.config.js  --progress",
-    "release": "cross-env NODE_ENV=production webpack --config ./build/webpack.release.config.js --colors --progress"
+    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.release.config.js --colors --progress"
   },
   "author": "{{ author }}",
   "license": "ISC",
@@ -46,7 +46,6 @@
     "isomorphic-fetch": "^2.2.1",
     "mocha": "^3.2.0",
     "mockjs": "^1.0.1-beta3",
-    "moment": "^2.18.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
