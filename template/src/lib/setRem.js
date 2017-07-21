@@ -6,7 +6,7 @@
 
     metaEl.setAttribute('name', 'viewport')
     metaEl.setAttribute('content', 'width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no')
-    document.getElementsByTagName('head')[0].appendChild(metaEl)
+    // document.getElementsByTagName('head')[0].appendChild(metaEl)
 
     var docEl = doc.documentElement
     var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
