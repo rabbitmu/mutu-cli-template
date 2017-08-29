@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+@import '../../style/_mixins';
+
+$loadingZIndex: 9;
+$loadingSpanBasicSize: .05rem;
+$spanCount: 10;
+$bgColor: #999;
+$loadingBgColor: #000;
+
+.loading {
+    @include setAbsolutePosition(0, 0, 0, 0);
+    z-index: $loadingZIndex;
+    background: rgba(#000, .1);
+}
+
+// 通过span元素轮流播放动画模拟旋转效果
+@keyframes loading {
+    to {
+        background: $loadingBgColor;
+    }
+}
+
+.loading-el {
+    @include setAbsolutePosition;
+
+    & > span {
+        $bottom: .3rem;
+        $height: $loadingSpanBasicSize * 2.5;
+        @include setAbsolutePosition($top: null, $bottom: $bottom);
+        transform-origin: $loadingSpanBasicSize / 2 $height * 1.8;
+        width: $loadingSpanBasicSize;
+        height: $height;
+        background: $bgColor;
+
+        @for $i from 1 through $spanCount {
+            &:nth-child(#{$i}) {
+                $animationTime: .4s;
+                animation: loading $animationTime linear;
+                animation-delay: ($i - 1) * $animationTime / 5;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                transform: rotate(360deg / $spanCount * $i);
+            }
+        }
+    }
+}
