@@ -52,6 +52,10 @@ function Toast(options = '') {
     instance.message = typeof options === 'string' ? options : options.message
 
     document.body.appendChild(instance.$el)
+
+    /**
+     * 加载时渲染过渡效果
+     */
     setTimeout(() => {
         instance.visible = true
 
