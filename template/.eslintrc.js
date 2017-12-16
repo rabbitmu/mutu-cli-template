@@ -1,7 +1,7 @@
 module.exports = {
     "globals": {
-        "Vue": true,
-        "process": true
+        "process": true,
+        "Vue": true
     },
     "env": {
         "browser": true,
@@ -38,6 +38,10 @@ module.exports = {
         "semi": [
             "error",
             "never"
+        ],
+        "spaced-comment": [
+            "error",
+            "always"
         ]
     }
 };

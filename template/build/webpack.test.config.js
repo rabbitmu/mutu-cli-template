@@ -1,5 +1,5 @@
 /**
-  * production env
+  * test env
   */
 
 const webpack = require('webpack')
@@ -19,7 +19,7 @@ const config = merge(baseConfig, {
         }),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: '"production"'
+                NODE_ENV: '"test"'
             }
         }),
         new webpack.optimize.UglifyJsPlugin()
@@ -35,9 +35,10 @@ const config = merge(baseConfig, {
     },
     output: {
         path: DIST_PATH,
-        filename: 'scripts/[name].bundle.js',
-        chunkFilename: `scripts/[name].chunk.js`
+        filename: 'scripts/[name].dev.bundle.js',
+        chunkFilename: 'scripts/[name].dev.chunk.js'
     }
 })
 
 module.exports = config
+  
