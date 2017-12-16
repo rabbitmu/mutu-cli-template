@@ -42,6 +42,30 @@ module.exports = {
         "spaced-comment": [
             "error",
             "always"
+        ],
+        "space-before-blocks": [
+            "error"
+        ],
+        "key-spacing": [
+            "error",
+            {
+                "beforeColon": false,
+                "afterColon": true,
+                "mode": "strict"
+            }
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "space-infix-ops": [
+            "error"
+        ],
+        "arrow-spacing": [
+            "error"
         ]
     }
 };
